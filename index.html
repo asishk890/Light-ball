@@ -29,8 +29,7 @@
     <img class="img2"
         src="https://img.freepik.com/free-vector/realistic-lit-light-bulb-isolated_1284-41774.jpg?w=740&t=st=1691584354~exp=1691584954~hmac=fa5aa91aa818501607a94512965f0656c98dc7c4d3dbccf05d4c9dffcba54480"
         alt="" style="display: none;">
-    <button class="btn btn-primary btn1">ON</button>
-    <button class="btn btn-primary btn2">OFF</button>
+    <button class="btn btn-primary btn1">Switch</button>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -46,12 +45,16 @@
 </body>
 <script>
     $(".btn1").click(function () {
-        $(".img1").css("display", "none");
-        $(".img2").css("display", "unset");
-    });
-    $(".btn2").click(function () {
-        $(".img1").css("display", "unset");
-        $(".img2").css("display", "none");
+        var x = $(".img1").css("display");
+        if(x === "none"){
+            $(".img1").css("display","unset");
+            $(".img2").css("display","none");
+        }
+        else{
+            $(".img1").css("display","none");
+            $(".img2").css("display","unset");
+        }
+        
     });
 
 </script>
